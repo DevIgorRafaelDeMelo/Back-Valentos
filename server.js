@@ -44,6 +44,7 @@ let registros = [];
 
 app.post('/enviar', upload.single('conta'), (req, res) => {
     const { nome, telefone, cidade, estado } = req.body;
+    console.log(`Recebido formulário: Nome: ${nome}, Telefone: ${telefone}, Cidade: ${cidade}, Estado: ${estado}`);
     const arquivo = req.file;
 
     const registro = {
