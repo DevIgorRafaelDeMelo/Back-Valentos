@@ -8,8 +8,9 @@ const PORT = process.env.PORT || 6600;
 
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:5173',
-    methods: ['GET', 'POST'],
+    origin: "http://localhost:5173",
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"]
 }));
 
 const storage = multer.diskStorage({
